@@ -1,12 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research Data Security 101</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Data Security 101</title>
+  <meta name="description" content="Slides for a panel talk on Research Data Security at the 1st annual NC Research Administrators Association conference, Durham, NC, 18-19 November 2024">
+  <meta name="author" content="John D Martin III, PhD, Assistant Director of Research Data Architecture, UNC Research Data Management Core">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/mine.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
 <body>
 
@@ -14,9 +19,10 @@
   <div class="slides">
     
     <!-- Title Slide -->
-    <section>
-      <h1>Research Data Security 101</h1>
-      <h3>John D. Martin III</h3>
+    <section data-background-color="#7BAFD4">
+      <h2>Research Data Security 101</h2>
+      <h4>John D. Martin III</h4>
+      <h5>UNC Research Data Management Core</h5>
     </section>
 
     <!-- QR Code Slide -->
@@ -26,84 +32,330 @@
 
     <!-- Slide 1: Introduction -->
     <section>
-      <h2>Introduction</h2>
+      <section>
+      <h2>Questions</h2>
+       <ol>
+            <li>Is our research data treated as a strategic institutional asset?</li>
+            <li>How are we minimizing the risks associated with handling PII and PHI?</li>
+            <li>Do our current data security practices align with industry standards like NIST/ISO?</li>
+        </ol>
       <aside class="notes">
-        Start by acknowledging the importance of data security in general but transition to why it’s even more critical in the research context.
-        Mention the increased focus on data privacy laws like GDPR and CCPA and the rise in data breaches affecting institutions globally.
+        Start by acknowledging the importance of data security in general but transition to why it’s even more critical in the research context.<br/><br/>
+        In today’s digital world, the value of data cannot be overstated. But in research, where data often includes highly sensitive personal information, the stakes are even higher. This is why data security isn’t just a compliance issue—it’s an ethical one.<br/><br/>
+        Start by acknowledging the importance of data security in general but transition to why it’s even more critical in the research context.<br/><br/>
+        Mention the increased focus on data privacy laws like GDPR and CCPA and the rise in data breaches affecting institutions globally.<br/><br/>
         Explain what you aim to convey: foundational understanding of research data security, its unique challenges, and aligning practices with industry standards.
       </aside>
-      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+      </section>
+      <section><h3>Importance of research data security</h3>
+      <aside class="notes">Provide a brief overview of why the topic is relevant now. Mention the increased focus on data privacy laws (like GDPR, CCPA) and the rise in data breaches affecting institutions globally.</aside></section>
+      
+      <section><h3>Data breaches feel inevitable now</h3>
+      <aside class="notes">Explain what you aim to convey: foundational understanding of research data security, its unique challenges, and how aligning practices with industry standards can help mitigate risks.</aside></section>
+    
+      <section><h3>Research data needs attention</h3>
+      <aside class="notes">Quickly outline what you’ll cover: the nature of sensitive research data, institutional controls, Federal standards, updating practices, challenges, and a call to action.</aside></section>
+    
     </section>
-    <section><h3>Importance</h3></section>
-    <section><h3>Data Breaches</h3></section>
-    <section><h3>Purpose</h3></section>
 
     <!-- Slide 2: Understanding Research Data as an Institutional Asset -->
-    <section>
-      <h2>Understanding Research Data as an Institutional Asset</h2>
+    <section data-background-color="#13294B">
+      <section>
+      <h2>Understanding research data as an institutional asset</h2>
       <aside class="notes">
-        Define what constitutes research data, including experimental, observational, and survey data.
-        Emphasize that research data is a critical institutional asset akin to financial records.
-        Highlight the increasing demand for research data in AI and machine learning applications.
-        Discuss the risks and consequences of data mismanagement, such as loss of public trust and legal liabilities.
+        Begin by defining what constitutes research data. This could include experimental data, observational data, survey results, administrative data, and increasingly, large datasets derived from digital health records.<br/><br/>Emphasize that research data often includes highly sensitive elements like PII and PHI, which are subject to strict privacy laws and ethical guidelines.
       </aside>
-      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+      <!--<img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">-->
+      </section>
+      
+      <section><h3>What is a data asset?</h3>
+      <aside class="notes">Frame research data as a critical asset of the institution, just like financial records or intellectual property. It is a product of institutional investment, and its value extends beyond individual projects.<br/><br/>Discuss the implications for compliance and data governance when data is treated as an asset, including enhanced oversight and a need for comprehensive security strategies.</aside></section>
+      
+      <section><h3>How valuable is research data?</h3>
+      <aside class="notes">Highlight the increasing demand for research data in AI and machine learning applications.</aside></section>
+      
+      <section><h3>AI readiness</h3>
+      <aside class="notes">Highlight how the demand for high-quality, well-structured research data has skyrocketed with the rise of AI and machine learning applications.<br/><br/>Explain that data integrity is foundational for AI; if the research data is compromised or mishandled, it undermines the credibility and reliability of AI models, which can lead to faulty insights and decisions.</aside></section>
+      
+      <section><h3>Consequences of mismanagement</h3>
+      <aside class="notes">Cover potential risks: loss of public trust, legal liabilities, reputational damage, and setbacks in scientific progress. Reference recent notable data breaches in academia, if relevant, to illustrate the impact.</aside></section>
+      
     </section>
-    <section><h3>Definition</h3></section>
-    <section><h3>Institutional Asset</h3></section>
-    <section><h3>Demand in AI</h3></section>
-    <section><h3>Consequences</h3></section>
 
     <!-- Slide 3: Key Types of Sensitive Information in Research -->
-    <section>
-      <h2>Key Types of Sensitive Information in Research</h2>
+    <section data-background-color="#00594C">
+      <section>
+      <h2>Key types of sensitive information in research</h2>
       <aside class="notes">
-        Overview of sensitive information in research, including PII and PHI.
-        Define PII with examples and discuss risks of exposure, including GDPR and CCPA implications.
-        Define PHI as per HIPAA with examples and legal requirements.
-        Discuss the risk of deductive disclosure and the need for careful analysis and sharing practices.
+      Start by acknowledging that sensitive information in research often overlaps with regulated data types, including PII and PHI.<br/><br/>Emphasize the unique challenges in research environments, where datasets may be extensive and de-identified data can still present risks if re-identification occurs.
       </aside>
-      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
-    </section>
-    <section><h3>Overview</h3></section>
-    <section><h3>PII</h3></section>
-    <section><h3>PHI</h3></section>
-    <section><h3>Deductive Disclosure</h3></section>
-
+      </section>
+      
+      <section><h3>Overview</h3>
+      <aside class="notes"></aside></section>
+      
+      <section><h3>Identity: PII</h3>
+      <aside class="notes">Define PII as any information that can be used to distinguish or trace an individual’s identity, either directly or indirectly.<br/><br/>Examples of PII: Names, addresses, social security numbers, IP addresses, email addresses, and even biometric data.<br/><br/>Risks of Exposure: Identity theft, financial fraud, and loss of privacy. Discuss how unauthorized access to PII can lead to legal implications, especially under regulations like GDPR and CCPA.<br/><br/>
+Considerations for Research Data: Explain how PII often appears in survey data, participant registries, or even metadata, requiring robust measures to anonymize or secure it.</aside></section>
+      
+      <section><h3>Health: PHI</h3>
+      <aside class="notes">Define PHI in the context of the Health Insurance Portability and Accountability Act (HIPAA). PHI includes any health-related information tied to an individual’s identity.<br/><br/>Examples of PHI: Medical records, health insurance information, lab results, and any data collected through health research that can be linked to an individual.<br/><br/>
+Legal and Ethical Implications: Highlight the strict requirements under HIPAA for handling PHI, including the need for proper consent, secure storage, and limitations on data sharing.<br/><br/> Mention potential fines and legal actions for breaches.</aside></section>
+      
+      <section><h3>Deductive disclosure</h3>
+      <aside class="notes">Even when datasets are anonymized, there is a risk of deductive disclosure, where participants can be identified through a combination of variables or through linking datasets.<br/><br/>This is especially concerning in small sample studies or when dealing with unique populations.<br/><br/>Emphasize the importance of careful data analysis and sharing practices to mitigate this risk.</aside></section>
+      
+      <section><h3>"Unintended consequences"</h3>
+      <aside class="notes">Address how PII and PHI often overlap in research contexts, particularly in clinical and biomedical studies.<br/><br/>
+Discuss the need for extra precautions when handling datasets that contain both PII and PHI, as these datasets are considered highly sensitive and have more stringent compliance requirements.<br/><br/>Mention new forms of sensitive data, such as genetic information or digital behavioral data (e.g., activity from wearables), which are becoming more common in research and present new privacy challenges.</aside></section>
+      
+    </section>  
+  
     <!-- Slide 4: Institutional Information Security Controls and Standards -->
-    <section>
-      <h2>Institutional Information Security Controls and Standards</h2>
+    <section data-background-color="#7BAFD4">
+      <section>
+      <h2>Institutional information security controls and standards</h2>
       <aside class="notes">
-        Explain the role of institutional security controls for data protection.
-        Discuss common frameworks like NIST and ISO 27001.
-        Highlight core security controls such as data classification, access control, encryption, and incident response.
+        Explain the role of institutional security controls for data protection.<br/><br/>
+        Discuss common frameworks like NIST and ISO 27001.<br/><br/>
+        Highlight core security controls such as data classification, access control, encryption, and incident response.<br/><br/>
         Align institutional controls with Federal requirements and conduct regular audits.
       </aside>
-      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+      </section>
+      
+      <section><h3>Role of controls</h3>
+      <aside class="notes">Start by explaining that institutional information security controls are the frameworks and policies designed to protect data from unauthorized access, loss, or corruption.<br/><br/>
+Emphasize the dual role of these controls: ensuring compliance with regulations and protecting the integrity and confidentiality of sensitive research data.</aside></section>
+      
+      <section><h3>Security control frameworks</h3>
+      <br/><br/>
+      <h5>NIST Cybersecurity Framework</h5>
+      <h5>NIST Special Publication 800-53</h5>
+      <h5>ISO/IEC 27001</h5>
+      <aside class="notes">NIST (National Institute of Standards and Technology):<br/><br/>
+Introduce the NIST Cybersecurity Framework and NIST Special Publication 800-53, which outline best practices for implementing security controls across data environments.<br/><br/>
+Highlight the applicability of these frameworks to research institutions, especially those receiving Federal funding.<br/><br/>
+ISO/IEC 27001 (International Organization for Standardization/International Electrotechnical Commission 27001):<br/><br/>
+Explain that ISO 27001 is a global standard for information security management systems (ISMS). It provides a systematic approach to managing sensitive information and includes people, processes, and IT systems.</aside></section>
+      
+      <section><h3>Core controls</h3>
+      <br/><br/>
+      <h5>Data classification</h5>
+      <h5>Access control</h5>
+      <h5>Encryption</h5>
+      <h5>Incident response and monitoring</h5>
+      <aside class="notes">Data classification:<br/><br/>
+Emphasize the importance of classifying data based on its sensitivity (e.g., public, internal, restricted, or confidential) to guide appropriate security measures.<br/><br/>
+Access Control:<br/><br/>
+Discuss role-based access control (RBAC), which restricts data access based on the user’s role within the organization. Highlight the principle of least privilege, ensuring users have the minimum access necessary for their work.<br/><br/>
+Encryption:<br/><br/>
+Explain the importance of encrypting sensitive data, both at rest and in transit, to protect against unauthorized access. Mention that encryption should be aligned with industry standards (e.g., AES-256 for strong encryption).<br/><br/>
+Incident Response and Monitoring:<br/><br/>
+Stress the need for robust incident response plans to quickly address data breaches or security incidents. Mention the role of continuous monitoring and logging to detect unusual activity.</aside></section>
+      
+      <section><h3>Federal alignment</h3>
+      <aside class="notes">Highlight the importance of aligning institutional controls with Federal requirements, such as those outlined in the Federal Information Security Management Act (FISMA) for federally funded research projects.<br/><br/>
+Discuss the need for internal audits and regular reviews to ensure compliance and identify potential gaps in the security posture.</aside></section>
+      
     </section>
-    <section><h3>Role of Controls</h3></section>
-    <section><h3>Frameworks</h3></section>
-    <section><h3>Core Controls</h3></section>
-    <section><h3>Federal Alignment</h3></section>
+    
+    <!-- Section 5: Federal Guidelines and Legal Compliance -->
+    <section data-background-color="#13294B">
+      <section><h2>Federal guidelines and legal compliance</h2>
+      <aside class="notes">Explain that compliance with Federal guidelines is not just a legal requirement but a fundamental component of responsible research data management. Federal agencies set the baseline for data protection standards, particularly for projects involving sensitive information or receiving federal funding.
+</aside></section>
+      
+      <section><h3>Importance of federal guidelines</h3>
+        <aside class="notes">Compliance with Federal guidelines is essential for responsible data management, particularly for projects involving sensitive information or receiving Federal funding.</aside>
+      </section>
+      
+      <section><h3>Key federal standards</h3>
+      <br/><br/>
+      <h5>Health Insurance Portability and Accountability Act (HIPAA)</h5>
+      <h5>Family Educational Rights and Privacy Act (FERPA)</h5>
+      <h5>Federal Information Security Management Act (FISMA)</h5>
+        <aside class="notes">Health Insurance Portability and Accountability Act (HIPAA):<br/><br/>
+Define HIPAA as the primary regulation governing the security of protected health information (PHI). Discuss the requirements for ensuring the confidentiality, integrity, and availability of PHI, including secure data handling, encryption, and proper consent for data use.<br/><br/>
+Family Educational Rights and Privacy Act (FERPA):<br/><br/>
+Define FERPA as the Federal law protecting the privacy of student education records. Emphasize its relevance to research projects involving educational data, such as studies on student performance or academic outcomes.<br/><br/>
+Federal Information Security Management Act (FISMA):<br/><br/>
+Introduce FISMA as the legislation governing the protection of Federal information systems. Explain that FISMA requires organizations to implement a comprehensive information security program, particularly when dealing with Federal research grants or projects involving government data.</aside>
+      </section>
+      
+      <section><h3>Alignment with NIST guidelines</h3>
+      <br/><br/>
+      <h5>NIST SP 800-53 (Security and Privacy Controls for Information Systems)</h5>
+      <h5>NIST SP 800-171 (Protecting Controlled Unclassified Information)</h5>
+        <aside class="notes">Highlight the role of NIST in setting the standards for information security, particularly through publications like NIST SP 800-53 (Security and Privacy Controls for Information Systems) and NIST SP 800-171 (Protecting Controlled Unclassified Information).<br/><br/>
+Emphasize that aligning institutional practices with NIST guidelines helps ensure compliance and strengthens the overall security framework.</aside>
+      </section>
+      
+      <section><h3>Consequences of non-compliance</h3>
+        <aside class="notes">Discuss potential legal repercussions, such as fines, loss of funding, and reputational damage, that can arise from non-compliance with Federal regulations.<br/><br/>
+Mention that beyond legal consequences, non-compliance can undermine the integrity of the research and erode public trust, which can have long-term impacts on future projects.</aside>
+      </section>
+      
+      <section><h3>Emerging legal considerations</h3>
+        <aside class="notes">Briefly mention the evolving legal landscape with increasing attention on data privacy laws, including the impact of the General Data Protection Regulation (GDPR) for research involving international participants and the California Consumer Privacy Act (CCPA) for data collection involving California residents.<br/><br/>
+Point out the need for institutions to stay updated on new regulations and adapt their data protection practices accordingly.</aside>
+      </section>
+      
+    </section>
 
+    <!-- Section 6: Best Practices for Securing Research Data -->
+    <section data-background-color="#4F758B">
+      <section><h2>Improving practices for securing research data</h2></section>
+      
+      <section><h3>System vetting</h3>
+        <aside class="notes">Emphasize that the foundation of a secure research data ecosystem begins with carefully vetting and selecting systems for each stage of the data lifecycle. This involves assessing the security features of potential tools and ensuring they comply with institutional and Federal standards for handling sensitive data.</aside>
+      </section>
+      
+      <section><h3>Minimizing manual handoffs</h3>
+        <aside class="notes">Discuss the dangers of manual data handoffs and the transfer of data to personal devices, which are significant security risks. These practices create vulnerable points where data can be mishandled, lost, or exposed, particularly when dealing with PII or PHI.<br/><br/>
+Emphasize that a well-integrated ecosystem reduces the need for researchers to download and manually transfer data, helping to maintain the security and integrity of sensitive information.</aside>
+      </section>
+      
+      <section><h3>Secure virtualized environments</h3>
+        <aside class="notes">Recommend the use of virtualized environments that provide analytical tools and secure access to data within the ecosystem. This approach encourages researchers and research teams to work with data directly in a secure, controlled environment, rather than downloading it locally.<br/><br/>
+Explain that this strategy is particularly critical for datasets containing PII or PHI, as it minimizes the risk of unauthorized access or accidental exposure.<br/><br/>
+Mention the added benefit of improved data integrity, as virtualized environments can log and track all data interactions, reducing the opportunity for untracked edits or manipulations.</aside>
+      </section>
+      
+      <section><h3>Avoiding spreadsheets</h3>
+        <aside class="notes">Provide a negative example of using spreadsheets for data editing, organizing, or managing. Explain that spreadsheets are prone to human error, lack robust version control, and do not capture the full history of data changes, making them unsuitable for handling sensitive research data.<br/><br/>
+Stress that instead of using spreadsheets, researchers should leverage integrated data management tools within the ecosystem that offer secure, auditable, and collaborative features.</aside>
+      </section>
+      
+      <section><h3>Ensuring data integrity</h3>
+        <aside class="notes">Reinforce the importance of maintaining secure data pipelines that protect data throughout its lifecycle—from collection and storage to analysis and sharing. Secure integration reduces the risk of data breaches and supports consistent data quality.</aside>
+      </section>
+      
+      <section><h3>Monitoring and audits</h3>
+        <aside class="notes">Recommend ongoing monitoring of data access and activity across the ecosystem. Implementing logging and audit capabilities within integrated systems helps detect unusual activities early and provides a transparent record of data interactions.</aside>
+      </section>
+      
+      <section><h3>Training and awareness</h3>
+        <aside class="notes">Highlight the need for training programs to ensure that all users of the ecosystem understand best practices for data security and integrity. Training should cover secure data handling, the importance of using ecosystem tools rather than local downloads, and awareness of emerging threats.</aside>
+      </section>
+      
+    </section>
+
+    <!-- Section 7: Challenges and Considerations -->
+    <section data-background-color="#EF426F">
+      <section><h2>Challenges and Considerations</h2></section>
+      
+      <section><h3>Balancing Access and Security</h3>
+        <aside class="notes">One of the primary challenges in research data security is finding the right balance between making data accessible for analysis and collaboration while ensuring it remains secure. This is especially complex in multi-institutional projects involving external partners with varying security capabilities.<br/><br/>
+Scalable access controls are essential to accommodate different data sensitivity levels and user roles without compromising security.</aside>
+      </section>
+      
+      <section><h3>Complacency: "It won't happen here."</h3>
+        <aside class="notes">Address the common perception in academia that research data is less likely to be targeted by malicious actors. This mindset can lead to complacency and underinvestment in security measures.<br/><br/>
+Use examples of data breaches in research settings to illustrate that sensitive datasets, particularly those valuable for AI and machine learning, are prime targets for attackers.</aside>
+      </section>
+      
+      <section><h3>Resource constraints and competing priorities</h3>
+        <aside class="notes">Limited budget and personnel can make it challenging for institutions to implement comprehensive data security measures. Security often competes with immediate research needs and project timelines.<br/><br/>
+Suggest prioritizing critical investments, such as cloud-based security services and collaboration with institutional IT, to optimize resources.</aside>
+      </section>
+      
+      <section><h3>Uneven data governance</h3>
+        <aside class="notes">Highlight that inconsistent data governance practices across departments or projects can create significant vulnerabilities. Often, data ownership is unclear, leading to a lack of standardized policies for data handling, access, and retention.<br/><br/>
+Emphasize the need for a unified data governance framework that clearly defines data ownership, responsibilities, and standardized protocols for managing research data securely across the institution.</aside>
+      </section>
+      
+      <section><h3>Evolving threats</h3>
+        <aside class="notes">The threat landscape is constantly changing, with new vulnerabilities and attack methods emerging. Research institutions must remain agile and proactive to address threats like phishing, ransomware, and insider attacks, which can be particularly damaging when sensitive data is compromised</aside>
+      </section>
+      
+      <section><h3>Legacy systems</h3>
+        <aside class="notes">Many research institutions rely on legacy systems that may not meet modern security standards. Integrating these outdated systems into a secure ecosystem can be difficult but is necessary for comprehensive data protection.<br/><br/>
+Recommend conducting regular assessments of legacy systems to identify security gaps and prioritize necessary upgrades or replacements.</aside>
+      </section>
+      
+      <section><h3>Compliance complexity</h3>
+        <aside class="notes">Complying with multiple regulations (e.g., HIPAA, FERPA, GDPR) can be complex, especially in international projects or multi-site studies. This complexity often leads to fragmented compliance efforts and potential oversights.<br/><br/>
+Suggest the creation of unified data governance policies that align with the most stringent applicable standards, simplifying compliance across projects.
+</aside>
+      </section>
+      
+      <section><h3>Data integrity in collaborative environments</h3>
+        <aside class="notes">Collaborative research often involves multiple stakeholders accessing and modifying data. Ensuring data integrity requires robust version control and audit trails.<br/><br/>
+Emphasize the importance of centralized data management tools that track changes and provide a clear, auditable history of data interactions.</aside>
+      </section>
+      
+    </section>
+
+    <!-- Section 8: Call to Action -->
+    <section data-background-color="#00A5AD">
+      <section><h2>Call to Action</h2></section>
+      
+      <section><h3>Recognize data as a strategic asset</h3>
+        <aside class="notes">Reiterate the central theme: Research data is a critical institutional asset whose value extends beyond individual projects. Its integrity and security are fundamental not only to compliance but to the institution’s reputation, research credibility, and its contributions to AI and machine learning.</aside>
+      </section>
+      
+      <section><h3>Invest in secure infrastructure</h3>
+        <aside class="notes">Emphasize the need for institutions to invest in secure data infrastructure, focusing on tools and systems that protect data at every stage of its lifecycle. Secure storage, identity management, and continuous monitoring are essential not just for preventing breaches but for maintaining data accuracy and reliability.<br/><br/>
+Highlight that investments in technology and training are vital to support both data security and data integrity. Well-trained staff are key to implementing processes that prevent unauthorized changes and ensure data remains consistent and accurate.</aside>
+      </section>
+      
+      <section><h3>Build a culture of research data security and integrity</h3>
+        <aside class="notes">Stress the importance of fostering a culture where data security and data integrity are seen as intertwined responsibilities. Embedding data security practices into everyday research activities helps maintain the accuracy, completeness, and reliability of the data.<br/><br/>
+Recommend regular training sessions that emphasize the dual goals of protecting data from external threats and ensuring that any internal data manipulation is transparent and properly documented.</aside>
+      </section>
+      
+      <section><h3>Foster collaboration between research and IT teams</h3>
+        <aside class="notes">Encourage stronger collaboration between research and IT teams to develop solutions that address both security and integrity needs. Effective collaboration helps design systems that prevent unauthorized data access and support rigorous version control and auditing.<br/><br/>
+Suggest forming a cross-functional data security and integrity committee with representatives from research, IT, and compliance to oversee the implementation of measures that uphold both principles</aside>
+      </section>
+      
+      <section><h3>Standardize data governance</h3>
+        <aside class="notes">Advocate for clear, standardized data governance policies that apply across all departments. These policies should outline protocols for secure data handling and integrity checks, reducing inconsistencies and ensuring that data remains accurate and protected throughout its lifecycle.<br/><br/>
+Emphasize that standardized governance not only aids in compliance but also ensures that data quality is maintained, making it easier to trace and verify data origins and modifications.</aside>
+      </section>
+      
+      <section><h3><Proactively adapt to emerging threats</h3>
+        <aside class="notes">Urge institutions to be proactive in adapting security measures to the evolving threat landscape while also implementing checks that safeguard data integrity. Regular updates to protocols and risk assessments help prevent breaches and detect potential data inaccuracies early.<br/><br/>
+Highlight the value of participating in threat intelligence sharing networks with other research institutions to stay informed about emerging risks that could compromise both data security and integrity.</aside>
+      </section>
+      
+      <section><h3>Research data leadership</h3>
+        <aside class="notes">Emphasize that institutional leadership is crucial in prioritizing data security and integrity initiatives. Their support is key to allocating resources, standardizing practices, and fostering a culture that values data as a trustworthy and protected asset.<br/><br/>
+Encourage leaders to champion the alignment of security and integrity efforts, recognizing that strong data security practices inherently support the goal of maintaining high data quality and reliability.</aside>
+      </section>
+      
+    </section>
+    
     <!-- Final QR Code Slide -->
     <section>
       <img src="qr.png" alt="QR Code" style="width: 30%;">
     </section>
 
     <!-- Thank You Slide -->
-    <section>
-      <h1>Research Data Security 101</h1>
-      <h3>John D. Martin III</h3>
-      <h2>Thank you</h2>
+    <section data-background-color="#7BAFD4">
+      <h1>Thank you.</h1>
+      <h3>Research Data Security 101</h3>
+      <h4>John D. Martin III</h4>
+      <h4>UNC Research Data Management Core</h4>
     </section>
 
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
 <script>
-  Reveal.initialize({ pdfMaxPagesPerSlide: 1 });
+    Reveal.initialize({
+      slideNumber: true,
+      slideNumber: 'h.v',
+      showSlideNumber: true,
+      pdfMaxPagesPerSlide: 1,
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+    hljs.highlightAll();
 </script>
 
 </body>
