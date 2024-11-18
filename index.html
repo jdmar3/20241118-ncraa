@@ -1,306 +1,110 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Data Futures: Literacy and Fluency in a New Era of Information Overload</title>
-  <meta name="description" content="Slides for Data Futures presentation">
-  <meta name="author" content="John D Martin III, PhD">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="dist/reset.css">
-  <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/mine.css">
-
-  <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/monokai.css">
-
-  <style>
-    .title-slide {
-      font-family: "Courier New", Courier, monospace;
-    }
-    .reveal pre code .nowrap {
-      white-space: nowrap !important;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Data Security 101</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-      <!-- Title Slide -->
-      <section class="title-slide">
-        <pre><code>
-  <meta charset="utf-8">
-          
-  <title>Data Futures</title>
-  <meta name="description" content="Literacy and Fluency in a New Era of Information Overload">
-  
-  <meta name="author" content="John D Martin III, PhD">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </code></pre>
-        <aside class="notes"></aside>
-        <!--<h1>Data Futures</h1>
-        <h2>Literacy and Fluency in a New Era of Information Overload</h2>
-        <h3>John D Martin III, PhD</h3>-->
-      </section>
 
-      <section>
-        <img width="30%" src="image/url_qr.png" alt="https://johndmart.in/20241024-datafluency-wmu/handout.html"/>
-      </section>
+<div class="reveal">
+  <div class="slides">
+    
+    <!-- Title Slide -->
+    <section>
+      <h1>Research Data Security 101</h1>
+      <h3>John D. Martin III</h3>
+    </section>
 
-      <!-- Slide 1: Questions to Engage the Audience -->
-      <section>
-        <pre><code class="wrap">[
-  {
-    "number": 0,
-    "question": "Do I interact with data daily as part of my work?",
-    "answer": "Maybe?"
-  },
-  {
-    "number": 1,
-    "question": "Have I interacted with a database today?",
-    "answer": "Not sure."
-  },
-  {
-    "number": 2,
-    "question": "What is a database?",
-    "answer": "Good question."
-  }
-]</code></pre>
-        <aside class="notes"></aside>
-      </section>
+    <!-- QR Code Slide -->
+    <section>
+      <img src="qr.png" alt="QR Code" style="width: 30%;">
+    </section>
 
-      <!-- Slide 2: Purpose of the Talk -->
-      <section>
-        <pre><code class="wrap">SELECT purpose
-FROM this_talk
-WHERE topic IN ("data fluency", "relevance", "knowledge building", "transferrable skills", "convergence", "AI readiness")
-AND topic NOT IN ("information literacy", "digital humanities", "STEM education", "GenAI threat");
-</code></pre>
-        <aside class="notes"></aside>
-      </section>
+    <!-- Slide 1: Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <aside class="notes">
+        Start by acknowledging the importance of data security in general but transition to why it’s even more critical in the research context.
+        Mention the increased focus on data privacy laws like GDPR and CCPA and the rise in data breaches affecting institutions globally.
+        Explain what you aim to convey: foundational understanding of research data security, its unique challenges, and aligning practices with industry standards.
+      </aside>
+      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+    </section>
+    <section><h3>Importance</h3></section>
+    <section><h3>Data Breaches</h3></section>
+    <section><h3>Purpose</h3></section>
 
-      <!-- Slide 3: Key Definitions -->
-      <section>
-        <pre><code>#!/usr/bin/env python3
-data = "Data refers to raw facts, figures, and information that can be collected, analyzed, and used to draw conclusions or make decisions."
-data_literacy = "This variable refers to the ability to read, interpret, and critically evaluate data."
-data_tools = "Technologies used for data management, analysis, archiving and sharing."
-data_ontology = "A structured framework that defines relationships and categories for data, allowing for better organization, integration, and understanding of data across different domains."
-data_fluency = {
-    "data": data,
-    "tools": data_tools,
-    "data_literacy": data_literacy,
-    "data_ontology": data_ontology
-}
-definition = f"Data fluency involves {data_fluency['data']}, leveraging {data_fluency['tools']}, understanding {data_fluency['data_literacy']}, and utilizing {data_fluency['data_ontology']} to make informed decisions."
-print(definition)
-exit()
-</code></pre>
-        <aside class="notes"></aside>
-      </section>
+    <!-- Slide 2: Understanding Research Data as an Institutional Asset -->
+    <section>
+      <h2>Understanding Research Data as an Institutional Asset</h2>
+      <aside class="notes">
+        Define what constitutes research data, including experimental, observational, and survey data.
+        Emphasize that research data is a critical institutional asset akin to financial records.
+        Highlight the increasing demand for research data in AI and machine learning applications.
+        Discuss the risks and consequences of data mismanagement, such as loss of public trust and legal liabilities.
+      </aside>
+      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+    </section>
+    <section><h3>Definition</h3></section>
+    <section><h3>Institutional Asset</h3></section>
+    <section><h3>Demand in AI</h3></section>
+    <section><h3>Consequences</h3></section>
 
-      <!-- Slide 4: Data Explosion (Part 1) -->
-      <section>
-        <h2>Data Explosion</h2>
-        <pre><code class="wrap">Year,DataGenInZB,ChangeYOY,ChangeYOYPct,Est
-2025,181.0,34.0,23.13,1
-2024,147.0,27.0,22.5,1
-2023,120.0,23.0,23.71,1
-2022,97.0,18.0,22.78,1
-2021,79.0,14.8,23.05,1
-2020,64.2,23.2,56.59,1
-2019,41.0,8.0,24.24,1
-2018,33.0,7.0,26.92,1
-2017,26.0,8.0,44.44,0
-2016,18.0,2.5,16.13,0
-2015,15.5,3.0,24,0
-2014,12.5,3.5,38.89,0
-2013,9.0,2.5,38.46,0
-2012,6.5,1.5,30,0
-2011,5.0,3.0,150,0
-2010,2.0,-,-,0</code></pre>
-      </section>
+    <!-- Slide 3: Key Types of Sensitive Information in Research -->
+    <section>
+      <h2>Key Types of Sensitive Information in Research</h2>
+      <aside class="notes">
+        Overview of sensitive information in research, including PII and PHI.
+        Define PII with examples and discuss risks of exposure, including GDPR and CCPA implications.
+        Define PHI as per HIPAA with examples and legal requirements.
+        Discuss the risk of deductive disclosure and the need for careful analysis and sharing practices.
+      </aside>
+      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+    </section>
+    <section><h3>Overview</h3></section>
+    <section><h3>PII</h3></section>
+    <section><h3>PHI</h3></section>
+    <section><h3>Deductive Disclosure</h3></section>
 
-      <!-- Slide 6: Impact on Research Institutions and Higher Education -->
-      <section data-background-color="rgb(75, 156, 211)">
-        <!--<h2>Impact on Research Institutions and Higher Education</h2>-->
-        <pre class="nowrap"><code><?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 170 134">
-<path d="m112.89 71.28-31.32-35.27c2.802-.213 5.639-.32 8.483-.32 8.867 0 17.68 1.061 25.663 3.083-1.918 9.139-2.892 18.621-2.892 28.228 0 1.427.023 2.857.065 4.285m-14.36 26.694c-2.813.214-5.648.323-8.482.323-8.868 0-17.682-1.061-25.665-3.082 1.922-9.136 2.894-18.62 2.894-28.228 0-1.428-.021-2.857-.065-4.285l31.318 35.272zm-60.69-15.9c-3.988-3.73-7.567-8.824-7.567-15.087 0-6.264 3.579-11.357 7.567-15.086.646 4.938.973 9.992.973 15.086s-.327 10.151-.973 15.087m113.56-6.15c-.538-.536-1.265-.833-2.014-.833-.108 0-.218.007-.328.019-.862.099-1.634.589-2.091 1.328-1.209 1.95-2.786 3.835-4.71 5.636-.645-4.936-.971-9.99-.971-15.083s.326-10.145.971-15.083c1.924 1.801 3.501 3.686 4.71 5.636.457.739 1.229 1.228 2.091 1.328.11.013.22.02.327.02.75 0 1.477-.299 2.015-.834l15.942-15.945c1.03-1.027 1.117-2.666.205-3.797-4.511-5.603-10.287-10.643-17.192-15.011 1.222-2.602 2.555-5.067 3.972-7.35.405-.651.529-1.438.345-2.183s-.661-1.383-1.321-1.77c-6.434-3.78-13.516-6.972-21.053-9.488-.295-.099-.601-.147-.901-.147-.989 0-1.934.517-2.455 1.406-1.529 2.608-2.975 5.356-4.318 8.192-10.943-3.152-22.56-4.748-34.575-4.748-10.585 0-20.918 1.247-30.744 3.713l-7.13-8.04c-.544-.619-1.324-.957-2.123-.957-.291 0-.585.044-.87.137-8.044 2.581-15.59 5.927-22.425 9.941-.734.432-1.237 1.17-1.37 2.012-.119.755.072 1.523.522 2.133 1.37 2.226 2.662 4.622 3.849 7.151-17.788 11.263-27.932 27.075-27.932 43.69 0 16.617 10.144 32.426 27.932 43.69-1.222 2.6-2.554 5.062-3.97 7.345-.404.653-.527 1.439-.344 2.184.184.743.66 1.383 1.322 1.772 6.431 3.777 13.515 6.97 21.049 9.486.298.1.603.146.901.146.989 0 1.935-.516 2.459-1.406 1.528-2.609 2.975-5.356 4.315-8.188 10.937 3.149 22.554 4.744 34.576 4.744 10.591 0 20.925-1.248 30.744-3.711l7.142 8.045c.55.619 1.328.956 2.128.956.29 0 .583-.043.872-.136 8.044-2.582 15.588-5.927 22.423-9.942.732-.432 1.234-1.168 1.37-2.008.118-.754-.071-1.523-.521-2.133-1.373-2.228-2.662-4.629-3.852-7.159 6.905-4.367 12.681-9.408 17.192-15.01.912-1.132.825-2.77-.205-3.797l-15.95-15.93z" fill="#13294B"/>
-<path fill="#7BAFD4" d="m140.2 87.45c-1.147-6.496-1.762-13.356-1.762-20.451 0-7.094.615-13.956 1.762-20.452 3.922 2.856 7.046 6.056 9.184 9.505l15.945-15.943c-4.783-5.939-11.104-11.239-18.603-15.68 1.547-3.565 3.28-6.903 5.182-9.967-6.225-3.657-13.111-6.77-20.512-9.242-1.89 3.225-3.634 6.631-5.22 10.189-10.973-3.421-23.214-5.339-36.128-5.339-11.208 0-21.91 1.443-31.714 4.059l-8.3-9.347c-7.884 2.538-15.224 5.808-21.824 9.686l.036.041c1.889 3.049 3.611 6.369 5.148 9.915-17.611 10.427-28.713 25.635-28.713 42.575 0 16.938 11.102 32.145 28.713 42.572-1.544 3.566-3.278 6.901-5.177 9.963 6.225 3.657 13.111 6.77 20.509 9.243 1.892-3.226 3.634-6.628 5.221-10.187 10.973 3.421 23.215 5.335 36.129 5.335 11.208 0 21.912-1.439 31.717-4.056l8.297 9.346c7.912-2.539 15.254-5.807 21.852-9.685l-.036-.041c-1.89-3.051-3.612-6.373-5.152-9.922 7.499-4.439 13.82-9.741 18.603-15.679l-15.94-15.954c-2.138 3.45-5.262 6.649-9.184 9.505m-100.3 0c-7.831-5.714-12.469-12.795-12.469-20.467 0-7.673 4.638-14.754 12.468-20.458 1.149 6.497 1.764 13.361 1.764 20.458s-.615 13.959-1.764 20.456m50.15 13.7c-10.479 0-20.352-1.406-29.031-3.888 2.212-9.522 3.412-19.697 3.412-30.268 0-4.175-.185-8.288-.548-12.324l40.467 45.58c-4.593.586-9.379.9-14.3.9m26.17-21.83-40.472-45.584c4.596-.585 9.383-.896 14.305-.896 10.479 0 20.352 1.406 29.031 3.887-2.211 9.524-3.412 19.698-3.412 30.27 0 4.174.186 8.287.548 12.323"/>
-</svg></code></pre>
-      </section>
+    <!-- Slide 4: Institutional Information Security Controls and Standards -->
+    <section>
+      <h2>Institutional Information Security Controls and Standards</h2>
+      <aside class="notes">
+        Explain the role of institutional security controls for data protection.
+        Discuss common frameworks like NIST and ISO 27001.
+        Highlight core security controls such as data classification, access control, encryption, and incident response.
+        Align institutional controls with Federal requirements and conduct regular audits.
+      </aside>
+      <img src="qr.png" style="position: absolute; bottom: 10px; right: 10px; width: 50px;">
+    </section>
+    <section><h3>Role of Controls</h3></section>
+    <section><h3>Frameworks</h3></section>
+    <section><h3>Core Controls</h3></section>
+    <section><h3>Federal Alignment</h3></section>
 
-      <!-- Slide 7: Data Literacy: A Critical Foundation -->
-      <section>
-        <h2>Data Literacy</h2>
-        <pre><code>#!/usr/bin/env Rscript
-# Load the necessary library
-library(dplyr)
+    <!-- Final QR Code Slide -->
+    <section>
+      <img src="qr.png" alt="QR Code" style="width: 30%;">
+    </section>
 
-# Load the CSV data
-data_literacy <- read.csv("data.csv")
+    <!-- Thank You Slide -->
+    <section>
+      <h1>Research Data Security 101</h1>
+      <h3>John D. Martin III</h3>
+      <h2>Thank you</h2>
+    </section>
 
-# List all variables in the dataset
-names(data_literacy)
-
-# Summarize all variables in the dataset
-summary(data_literacy)</code></pre>
-      </section>
-      <!-- Slide 8: Data Literacy: Current Gaps -->
-      <section>
-        <h2>Gaps in Data Literacy</h2>
-        <img src="image/excelbrain.png" alt="A pinkish clipart image of a brain superimposed over a screenshot of an Excel spreadsheet" />
-      </section>
-
-      <!-- Slide 9: Data Literacy: Real-World Examples -->
-      <section data-background-color="red">
-        <h2>Data Literacy in the Real-World</h2>
-        <p>In which the protagonist avoids deconstructing and reconstructing a database as a bunch of Excel spreadsheets with pivot tables.</p>
-        <!--<pre><code></code></pre>-->
-      </section>
-      <!-- Slide 8: Moving from Data Literacy to Data Fluency -->
-      <section data-background-color="Citron">
-        <h2>Moving from Data Literacy to Data Fluency</h2>
-      </section>
-
-      <!-- Slide 3: Key Definitions -->
-      <section>
-        <pre><code>#!/usr/bin/env python3
-data = "Data refers to raw facts, figures, and information that can be collected, analyzed, and used to draw conclusions or make decisions."
-data_literacy = "This variable refers to the ability to read, interpret, and critically evaluate data."
-data_tools = "Technologies used for data management, analysis, archiving and sharing."
-data_ontology = "A structured framework that defines relationships and categories for data, allowing for better organization, integration, and understanding of data across different domains."
-data_fluency = {
-    "data": data,
-    "tools": data_tools,
-    "data_literacy": data_literacy,
-    "data_ontology": data_ontology
-}
-definition = f"Data fluency involves {data_fluency['data']}, leveraging {data_fluency['tools']}, understanding {data_fluency['data_literacy']}, and utilizing {data_fluency['data_ontology']} to make informed decisions."
-print(definition)
-exit()
-</code></pre>
-        <aside class="notes"></aside>
-      </section>
-
-            <!-- Slide 8: Moving from Data Literacy to Data Fluency -->
-      <section>
-        <h2>Why data fluency matters</h2>
-      </section>
-
-      <section>
-        <h2>Data Explosion</h2>
-        <pre><code class="wrap">Year,DataGenInZB,ChangeYOY,ChangeYOYPct,Est
-2025,181.0,34.0,23.13,1
-2024,147.0,27.0,22.5,1
-2023,120.0,23.0,23.71,1
-2022,97.0,18.0,22.78,1
-2021,79.0,14.8,23.05,1
-2020,64.2,23.2,56.59,1
-2019,41.0,8.0,24.24,1
-2018,33.0,7.0,26.92,1
-2017,26.0,8.0,44.44,0
-2016,18.0,2.5,16.13,0
-2015,15.5,3.0,24,0
-2014,12.5,3.5,38.89,0
-2013,9.0,2.5,38.46,0
-2012,6.5,1.5,30,0
-2011,5.0,3.0,150,0
-2010,2.0,-,-,0</code></pre>
-      </section>
-
-      <section>
-        <img width="90%" src="https://cdn.buttercms.com/output=f:webp/ods4p5fQVmXkFeHFP3Zx" alt="data growth"/>
-      </section>
-
-      <!-- Slide 9: Challenges and Opportunities -->
-      <section data-background-color="green">
-        <h2>Challenges and Opportunities</h2>
-      </section>
-
-      <!-- Slide 9: Challenges and Opportunities -->
-      <section>
-        <h2>Educational inertia, resource gaps, and overwhelming pace of data production</h2>
-      </section>
-
-      <!-- Slide 9: Challenges and Opportunities -->
-      <section>
-        <h2>Adaptation and leadership in building data skills</h2>
-      </section>
-
-      <!-- Slide 10: Strategies for Building Data Capacity -->
-      <section data-background-color="blue">
-        <h2>Strategies for Capacity Building</h2>
-      </section>
-
-            <!-- Slide 10: Strategies for Building Data Capacity -->
-      <section>
-        <h2>Educational Strategies</h2>
-      </section>
-
-            <!-- Slide 10: Strategies for Building Data Capacity -->
-      <section>
-        <h2>Organizational Approaches</h2>
-      </section>
-
-                  <!-- Slide 10: Strategies for Building Data Capacity -->
-      <section>
-        <h2>Individual Action</h2>
-      </section>
-
-      <!-- Slide 11: Conclusion -->
-      <section data-background-color="orange">
-        <h2>Takeaways</h2> 
-        <p>Focus on data fluency, not cursory awareness or literacy</p>
-      </section>
-
-      <!-- Slide 11: Conclusion -->
-      <section data-background-color="yellow">
-        <h2>Call to Action</h2> 
-        <p>Reflect on data capabilities and enhance skills: right now.</p>
-      </section>
-
-            <!-- Slide 1: Questions to Engage the Audience -->
-      <section>
-        <pre><code class="wrap">[
-  {
-    "number": 0,
-    "question": "Do I interact with data daily as part of my work?",
-    "answer": "Yes."
-  },
-  {
-    "number": 1,
-    "question": "Have I interacted with a database today?",
-    "answer": "Yes."
-  },
-  {
-    "number": 2,
-    "question": "What is a database?",
-    "answer": "A data store that applies an ontology to make sense of a set or sets of data in relation to itself. It is a self-contained universe of data."
-  }
-]</code></pre>
-        <aside class="notes"></aside>
-      </section>
-
-      <section>
-        <img width="30%" src="image/url_qr.png" alt="https://johndmart.in/20241024-datafluency-wmu/handout.html"/>
-      </section>
-      
-    </div>
   </div>
+</div>
 
-  <script src="dist/reveal.js"></script>
-  <script src="plugin/notes/notes.js"></script>
-  <script src="plugin/markdown/markdown.js"></script>
-  <script src="plugin/highlight/highlight.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-    });
-    hljs.highlightAll();
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({ pdfMaxPagesPerSlide: 1 });
+</script>
+
 </body>
 </html>
